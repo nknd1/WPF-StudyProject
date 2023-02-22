@@ -69,10 +69,9 @@
                             <TextBlock TextAlignment="Right">
                             <Run FontSize="16">Категория товара</Run>
                             <LineBreak></LineBreak>
-                            <Run FontSize="14" Text="{Binding Категория}"></Run>
+                            <Run FontSize="14" Text="{Binding Category}"></Run>
                             </TextBlock>
                         </StackPanel>
-                     
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
