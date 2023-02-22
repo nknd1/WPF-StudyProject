@@ -85,8 +85,9 @@ namespace WpfAppNikiforov
         {
             InitializeComponent();
         }
-
-        private void Find(string search)
+    }
+}
+      /*  private void Find(string search)
         {
             search = search.Trim().ToLower();
 
@@ -116,3 +117,4 @@ namespace WpfAppNikiforov
         
     }
 }
+      */
