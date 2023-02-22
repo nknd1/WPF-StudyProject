@@ -85,10 +85,63 @@ namespace WpfAppNikiforov
         {
             InitializeComponent();
         }
+    }
+}
+      /*  private void Find(string search)
+        {
+            search = search.Trim().ToLower();
 
+        private void Find(string search)
+        {
+            search = search.Trim().ToLower();
+
+            var view = CollectionViewSource.GetDefaultView(ProductList.ItemsSource);
+            if (view == null) return;
+
+            if (search.Length == 0)
+            {
+                view.Filter = null;
+            }
+            else
+            {
+                view.Filter = new Predicate<object>((object o) =>
+                {
+                    Prod prod = o as Prod;
+                    if (prod == null)
+                        return false;
+                    return prod.Name.ToLower().IndexOf(search) != -1;
+                });
+            }
+        }
+            var view = CollectionViewSource.GetDefaultView(ProductList.ItemsSource);
+            if (view == null) return;
+
+            if (search.Length == 0)
+            {
+                view.Filter = null;
+            }
+            else
+            {
+                view.Filter = new Predicate<object>((object o) =>
+                {
+                    Prod prod = o as Prod;
+                    if (prod == null)
+                        return false;
+                    return prod.Name.ToLower().IndexOf(search) != -1;
+                });
+            }
+        }
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ApplySort();
         }
+
+        
+
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
+      */
