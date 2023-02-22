@@ -1,1 +1,1 @@
-College Project WPF App.
+College WPF Appliaction.
