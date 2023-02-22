@@ -72,7 +72,7 @@
                             <Run FontSize="14" Text="{Binding Категория}"></Run>
                             </TextBlock>
                         </StackPanel>
-
+                     
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

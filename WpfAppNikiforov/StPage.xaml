@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="600" d:DesignWidth="600"
       Title="StPage"
-      ShowsNavigationUI="False">
+      ShowsNavigationUI="False"
+      Background="AliceBlue">
 
     <Grid>
         <Frame Name="stframe"></Frame>
