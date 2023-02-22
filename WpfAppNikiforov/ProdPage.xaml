@@ -1,0 +1,98 @@
+﻿<Page x:Class="WpfAppNikiforov.ProdPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfAppNikiforov"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="600"
+      Title="ProdPage"
+      ShowsNavigationUI="False">
+    <Page.Resources>
+        <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+        <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+        <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="AllowDrop" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True" >
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsKeyboardFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsInactiveSelectionHighlightEnabled" Value="true"/>
+                        <Condition Property="IsSelectionActive" Value="false"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="SelectionBrush" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                </MultiTrigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+
+    <Grid RenderTransformOrigin="0.568,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="auto" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Row="1" x:Name="ProductBlock" Margin="12,0,19,-143" Grid.RowSpan="1" Grid.ColumnSpan="1" RenderTransformOrigin="0.5,0.5" >
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.072"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Label FontSize="20" Margin="10 0 10 0" Foreground="Black" HorizontalAlignment="Center">Название</Label>
+            <TextBox Name ="tbCategoryName" FontSize="20" Margin="10" Foreground="Black"  Text="{Binding Name}"
+                      ></TextBox>
+            <Label FontSize="20" Margin="10 0 10 0" Foreground="Black" HorizontalAlignment="Center">Количество</Label>
+            <TextBox Name ="tbCount" FontSize="20" Margin="10" Foreground="Black" Text="{Binding Count}"></TextBox>
+            <Label FontSize="20" Margin="10 0 10 0" Foreground="Black" HorizontalAlignment="Center">Размер</Label>
+            <TextBox Name ="tbSize" FontSize="20" Margin="10" Foreground="Black" Text="{Binding Size}"></TextBox>
+            <Label FontSize="20" Margin="10 0 10 0" Foreground="Black" HorizontalAlignment="Center">Цена</Label>
+            <TextBox Name ="tbPrice" FontSize="20" Margin="10" Foreground="Black" Text="{Binding Price}"></TextBox>
+            <Label FontSize="20" Margin="3" HorizontalAlignment="Center" >Категория</Label>
+            <ComboBox SelectedItem="{Binding cat1}" Margin="20" Name="cbCategory"></ComboBox>
+            <Button Width="119" x:Name="BtnSaveClick" Click="BtnSaveClick_AddProd" Content="Добавить" Margin="0 5 0 10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" >
+            <Image Width="200" Height="300" Name="ImageBlock"></Image>
+            <Button Content="Выбрать изображение"  Width="150" Click="SelectImageAndAdd"/>
+            <Button Height="20" Width="150" Click="MoveLastView" Margin="0 20 0 20" Content="Список товаров"/>
+            <Button Content="Добавить новую категорию" x:Name="InputCat" Click="InputCat_Click" Width="150" Height="30" HorizontalAlignment="Center" FontSize="9" VerticalAlignment="Bottom" Margin="0 60 0 10"/>
+        </StackPanel>
+
+    </Grid>
+
+</Page>
