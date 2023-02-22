@@ -1,1 +1,2 @@
-College WPF Appliaction.
+Study project[C# WPF]
+
