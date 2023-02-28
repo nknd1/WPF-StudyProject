@@ -42,22 +42,22 @@ namespace WpfAppNikiforov
             {
                 new SortItem()
                 {
-                    Name = "по возрастанию",
+                    Name = "по возрастанию(цена)",
                     sort = new SortDescription("Price",ListSortDirection.Ascending)
                 },
                 new SortItem()
                 {
-                    Name = "по убыванию",
+                    Name = "по убыванию(цена)",
                     sort = new SortDescription("Price", ListSortDirection.Descending)
                 },
                  new SortItem()
                 {
-                    Name = "по возрастанию",
+                    Name = "по возрастанию(количество)",
                     sort = new SortDescription("Count", ListSortDirection.Ascending)
                 },
                   new SortItem()
                 {
-                    Name = "по возрастанию",
+                    Name = "по возрастанию(количество)",
                     sort = new SortDescription("Count", ListSortDirection.Descending)
                 }
             };
