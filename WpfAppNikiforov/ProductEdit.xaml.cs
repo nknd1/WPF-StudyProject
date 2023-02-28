@@ -25,7 +25,34 @@ namespace WpfAppNikiforov
         {
             InitializeComponent();
         }
-        
 
+        private void EditProduct(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void SelectImageAndAdd(object sender, RoutedEventArgs e)
+        {
+            Prod prod = ProductBlock.DataContext as Prod;
+            if (prod == null)
+                return;
+
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "Файлы изображений|*.jpg;*.jpeg;*.png;";
+            fileDialog.Multiselect = false;
+            if (fileDialog.ShowDialog() == true)
+            {
+                Stream fileStream = fileDialog.OpenFile();
+                prod.Image = new byte[fileStream.Length];
+                fileStream.Read(prod.Image, 0, (int)fileStream.Length);
+
+                fileStream.Seek(0, SeekOrigin.Begin);
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.StreamSource = fileStream;
+                bitmap.EndInit();
+                ImageBlock.Source = bitmap;
+            }
+        }
     }
+
 }
