@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +9,11 @@ namespace WpfAppNikiforov
     public class Pages
     {
         private static dbconn dbconnection;
-
         private static StPage startPage;
         private static CatPage catPage;
         private static ProdPage prodPage;
         private static ProductList prodPreview;
-
+        private static ProductEdit productEdit;
         public static dbconn dbconn
         {
             get
@@ -78,6 +77,18 @@ namespace WpfAppNikiforov
                 return prodPreview;
             }
 
+        }
+        public static ProductEdit Edit
+        {
+            get
+            {
+                if(productEdit == null) 
+                {
+                    productEdit = new ProductEdit(dbconn);
+                }
+                return productEdit;
+            }
+            
         }
     }
 }
