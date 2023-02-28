@@ -20,10 +20,12 @@ namespace WpfAppNikiforov
     /// </summary>
     public partial class ProductEdit : Page
     {
-        public ProductEdit()
+        dbconn dbconn;
+        public ProductEdit(dbconn dbconnection)
         {
             InitializeComponent();
         }
+        
 
     }
 }
