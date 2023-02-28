@@ -42,34 +42,26 @@ namespace WpfAppNikiforov
             {
                 new SortItem()
                 {
-                    Name = "Цена",
-                    sort = new SortDescription("по возрастанию (цена)", ListSortDirection.Ascending)
-                }
-            };
-            SortLists = new List<SortItem>()
-            {
+                    Name = "по возрастанию",
+                    sort = new SortDescription("Price",ListSortDirection.Ascending)
+                },
                 new SortItem()
                 {
-                    Name = "Цена",
-                    sort = new SortDescription("по убыванию(цена)", ListSortDirection.Descending)
-                }
-            };
-            SortLists = new List<SortItem>()
-            {
-                new SortItem()
+                    Name = "по убыванию",
+                    sort = new SortDescription("Price", ListSortDirection.Descending)
+                },
+                 new SortItem()
                 {
-                    Name = "Количество",
-                    sort = new SortDescription("по возрастанию(количество)", ListSortDirection.Ascending)
-                }
-            };
-            SortLists = new List<SortItem>()
-            {
-                new SortItem()
+                    Name = "по возрастанию",
+                    sort = new SortDescription("Count", ListSortDirection.Ascending)
+                },
+                  new SortItem()
                 {
-                    Name = "Количество",
-                    sort = new SortDescription("по возрастанию(количество)", ListSortDirection.Descending)
+                    Name = "по возрастанию",
+                    sort = new SortDescription("Count", ListSortDirection.Descending)
                 }
             };
+         
 
             DataContext = this;
         }
@@ -124,6 +116,17 @@ namespace WpfAppNikiforov
         {
 
         }
+
+        private void Back(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+                
+        }
     }
+        
 }
 
