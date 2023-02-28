@@ -1,5 +1,7 @@
-﻿using System;
+using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,15 +22,24 @@ namespace WpfAppNikiforov
     /// </summary>
     public partial class ProductEdit : Page
     {
-        dbconn dbconn;
+        private dbconn dbconn;
         public ProductEdit(dbconn dbconnection)
         {
             InitializeComponent();
+            this.dbconn = dbconnection;
+        }
+        public void SetProduct(Prod prod)
+        {
+            ProductBlock.DataContext = prod;
         }
 
         private void EditProduct(object sender, RoutedEventArgs e)
         {
-
+            dbconn.SaveChanges();
+            if (NavigationService.CanGoBack)
+            {
+                NavigationService.GoBack();
+            }
         }
         private void SelectImageAndAdd(object sender, RoutedEventArgs e)
         {
