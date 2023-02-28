@@ -122,11 +122,14 @@ namespace WpfAppNikiforov
             NavigationService.GoBack();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-                
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                Find(textBox.Text);
+            }
         }
-    }
         
 }
 
