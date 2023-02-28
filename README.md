@@ -1,2 +1,2 @@
-Study project [C# WPF]
+Study project [C# WPF NET.Framework]
 
