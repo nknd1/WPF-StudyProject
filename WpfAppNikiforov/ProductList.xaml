@@ -37,8 +37,7 @@
                             <ColumnDefinition Width="300"/>
                             <ColumnDefinition/>
                             <ColumnDefinition Width="200"/>
-                        </Grid.ColumnDefinitions>
-                        
+                        </Grid.ColumnDefinitions>                        
                         <Image Width="200" Stretch="UniformToFill" Grid.Column="0" Source="{Binding Image}"></Image>
                         <StackPanel  VerticalAlignment="Center" Grid.Column="1" Margin="15 0 0 15">
                             <TextBlock TextAlignment="Left" >
