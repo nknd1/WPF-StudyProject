@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfAppNikiforov.ProdPage"
+<Page x:Class="WpfAppNikiforov.ProdPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProdPage"
       ShowsNavigationUI="False"
-      Background="AliceBlue">     
+      Background="AliceBlue">
     <Page.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -57,13 +57,13 @@
     </Page.Resources>
     <Grid RenderTransformOrigin="0.568,0.5">
         <Grid.RowDefinitions>
-            <RowDefinition ></RowDefinition>           
+            <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="250"></ColumnDefinition>
             <ColumnDefinition Width="400"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>        
-        </Grid.ColumnDefinitions>    
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="1" x:Name="ProductBlock" Margin="12,0,19,-143" Grid.RowSpan="1" Grid.ColumnSpan="1" RenderTransformOrigin="0.5,0.5" >
             <StackPanel.RenderTransform>
                 <TransformGroup>
@@ -84,12 +84,13 @@
             <Label FontSize="15" Margin="3" HorizontalAlignment="Center" >Категория</Label>
             <ComboBox SelectedItem="{Binding cat1}" Margin="15" Name="cbCategory"></ComboBox>
             <Button Width="119" x:Name="BtnSaveClick" Click="BtnSaveClick_AddProd" Content="Добавить" Margin="0 5 0 10"/>
+            <Button Width="119" Content="Редактировать" Click="EditProduct"></Button>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="0,0,6,0" >
             <Image Width="400" Height="300" Name="ImageBlock"></Image>
             <Button Content="Выбрать изображение"  Width="150" Click="SelectImageAndAdd"/>
             <Button Height="20" Width="150" Click="MoveLastView" Margin="0 20 0 20" Content="Список товаров"/>
-            <Button Content="Добавить новую категорию" x:Name="InputCat" Click="InputCat_Click" Width="150" Height="30" HorizontalAlignment="Center" FontSize="9" VerticalAlignment="Bottom" Margin="0 60 0 10"/>
+            <Button Content="Добавить новую категорию" x:Name="InputCat" Click="InputCat_Click" Width="150" Height="30" FontSize="9"/>
         </StackPanel>
     </Grid>
 </Page>
