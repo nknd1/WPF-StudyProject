@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ProductEdit">
-
     <Page.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -54,19 +53,15 @@
             </Style.Triggers>
         </Style>
     </Page.Resources>
-
     <Grid RenderTransformOrigin="0.568,0.5">
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
-
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="250"></ColumnDefinition>
             <ColumnDefinition Width="400"></ColumnDefinition>
             <ColumnDefinition Width="100"></ColumnDefinition>
-
         </Grid.ColumnDefinitions>
-
         <StackPanel Grid.Row="1" x:Name="ProductBlock" Margin="12,0,19,-143" Grid.RowSpan="1" Grid.ColumnSpan="1" RenderTransformOrigin="0.5,0.5" >
             <StackPanel.RenderTransform>
                 <TransformGroup>
@@ -77,8 +72,7 @@
                 </TransformGroup>
             </StackPanel.RenderTransform>
             <Label FontSize="15" Margin="10 0 10 0" Foreground="Black" HorizontalAlignment="Center">Название</Label>
-            <TextBox Name ="tbCategoryName" FontSize="15" Margin="10" Foreground="Black"  Text="{Binding Name}"
-                      ></TextBox>
+            <TextBox Name ="tbCategoryName" FontSize="15" Margin="10" Foreground="Black"  Text="{Binding Name}"></TextBox>
             <Label FontSize="15" Margin="10 0 10 0" Foreground="Black" HorizontalAlignment="Center">Количество</Label>
             <TextBox Name ="tbCount" FontSize="15" Margin="10" Foreground="Black" Text="{Binding Count}"></TextBox>
             <Label FontSize="15" Margin="10 0 10 0" Foreground="Black" HorizontalAlignment="Center">Размер</Label>
@@ -95,7 +89,5 @@
             <Button Height="20" Width="150" Click="MoveLastView" Margin="0 20 0 20" Content="Список товаров"/>
             <Button Content="Добавить новую категорию" x:Name="InputCat" Click="InputCat_Click" Width="150" Height="30" HorizontalAlignment="Center" FontSize="9" VerticalAlignment="Bottom" Margin="0 60 0 10"/>
         </StackPanel>
-
     </Grid>
-
 </Page>
