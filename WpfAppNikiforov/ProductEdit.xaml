@@ -5,8 +5,8 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfAppNikiforov"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ProductEdit">
+      d:DesignHeight="450"
+      Title="ProductEdit" Width="678">
     <Page.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -53,16 +53,16 @@
             </Style.Triggers>
         </Style>
     </Page.Resources>
-    <Grid RenderTransformOrigin="0.568,0.5">
+    <Grid RenderTransformOrigin="0.568,0.5" Margin="0,0,150,0">
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="250"></ColumnDefinition>
-            <ColumnDefinition Width="400"></ColumnDefinition>
-            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition Width="271"></ColumnDefinition>
+            <ColumnDefinition Width="222"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Row="1" x:Name="ProductBlock" Margin="12,0,19,-143" Grid.RowSpan="1" Grid.ColumnSpan="1" RenderTransformOrigin="0.5,0.5" >
+        <StackPanel x:Name="ProductBlock" Margin="12,0,19,-143" Grid.RowSpan="1" Grid.ColumnSpan="1" RenderTransformOrigin="0.5,0.5" >
             <StackPanel.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

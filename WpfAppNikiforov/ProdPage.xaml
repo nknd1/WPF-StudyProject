@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfAppNikiforov"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450"
       Title="ProdPage"
       ShowsNavigationUI="False"
-      Background="AliceBlue">
+      Background="AliceBlue" Width="642">
     <Page.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
@@ -58,6 +58,7 @@
     <Grid RenderTransformOrigin="0.568,0.5">
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="250"></ColumnDefinition>

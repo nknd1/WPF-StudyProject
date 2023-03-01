@@ -30,6 +30,9 @@ namespace WpfAppNikiforov
         public List<SortItem> SortLists { get; set; }
         public SortItem SelectedSortItem { get; set; }
 
+        public SortItem SelectedSortCategory { get; set; }
+       
+        
         public ProductList(dbconn dbconnection)
         {
             InitializeComponent();
@@ -131,6 +134,17 @@ namespace WpfAppNikiforov
             }
         }
 
+        private void FilterCategory(object sender, SelectionChangedEventArgs e)
+        {
+          
+        }
+
+        private void Filter()
+        {
+            
+            
+        }
+        
     }
 }
 

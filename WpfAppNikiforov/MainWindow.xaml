@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WpfAppNikiforov"
         mc:Ignorable="d"
         FontSize="19"
-        Title="Main" Height="450" Width="800"
-        Background="LightGray">
+        Title="Main" Height="500" Width="800"
+        Background="AliceBlue">
     <Grid>
         <Frame Name="AppFr" NavigationUIVisibility="Hidden"></Frame>
      
