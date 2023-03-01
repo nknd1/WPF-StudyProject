@@ -31,8 +31,8 @@ namespace WpfAppNikiforov
         public SortItem SelectedSortItem { get; set; }
 
         public SortItem SelectedSortCategory { get; set; }
-       
-        
+
+
         public ProductList(dbconn dbconnection)
         {
             InitializeComponent();
@@ -64,8 +64,6 @@ namespace WpfAppNikiforov
                     sort = new SortDescription("Count", ListSortDirection.Descending)
                 }
             };
-
-
             DataContext = this;
         }
         private void ApplySort()
@@ -74,7 +72,6 @@ namespace WpfAppNikiforov
             if (view == null || SelectedSortItem == null) return;
             view.SortDescriptions.Clear();
             view.SortDescriptions.Add(SelectedSortItem.sort);
-
         }
 
         private void Find(string search)
@@ -103,21 +100,11 @@ namespace WpfAppNikiforov
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ApplySort();
-        }
-
-        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+        }     
 
         public ProductList()
         {
             InitializeComponent();
-        }
-
-        private void TextBox_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void Back(object sender, RoutedEventArgs e)
@@ -125,7 +112,7 @@ namespace WpfAppNikiforov
             NavigationService.GoBack();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TextBox_TexttChanged(object sender, TextChangedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
             if (textBox != null)
@@ -136,15 +123,23 @@ namespace WpfAppNikiforov
 
         private void FilterCategory(object sender, SelectionChangedEventArgs e)
         {
-          
+
         }
 
         private void Filter()
         {
-            
-            
+
+
         }
-        
+
+        private void ProductView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Prod selectedProd = ProductView.SelectedItem as Prod;
+            if (selectedProd != null)              
+            Pages.Edit.SetProduct(selectedProd);
+            NavigationService.Navigate(Pages.Edit);
+            return;           
+        }
     }
 }
 

@@ -119,9 +119,6 @@ namespace WpfAppNikiforov
             NavigationService.Navigate(Pages.List);
         }
 
-        private void EditProducts(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(Pages.Edit);
-        }
+        
     }
 }
