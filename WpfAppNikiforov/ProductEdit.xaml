@@ -81,13 +81,11 @@
             <TextBox Name ="tbPrice" FontSize="15" Margin="10" Foreground="Black" Text="{Binding Price}"></TextBox>
             <Label FontSize="15" Margin="3" HorizontalAlignment="Center" >Категория</Label>
             <ComboBox SelectedItem="{Binding cat1}" Margin="15" Name="cbCategory"></ComboBox>
-            <Button Width="119" x:Name="BtnSaveClick" Click="BtnSaveClick_AddProd" Content="Сохранить" Margin="0 5 0 10"/>
+            <Button Width="119" x:Name="BtnSaveClick" Click="SaveChangesProduct" Content="Сохранить" Margin="0 5 0 10"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="0,0,6,0" >
             <Image Width="400" Height="300" Name="ImageBlock"></Image>
             <Button Content="Выбрать изображение"  Width="150" Click="SelectImageAndAdd"/>
-            <Button Height="20" Width="150" Click="MoveLastView" Margin="0 20 0 20" Content="Список товаров"/>
-            <Button Content="Добавить новую категорию" x:Name="InputCat" Click="InputCat_Click" Width="150" Height="30" HorizontalAlignment="Center" FontSize="9" VerticalAlignment="Bottom" Margin="0 60 0 10"/>
         </StackPanel>
     </Grid>
 </Page>

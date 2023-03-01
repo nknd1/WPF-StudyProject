@@ -61,7 +61,7 @@ namespace WpfAppNikiforov
                     sort = new SortDescription("Count", ListSortDirection.Descending)
                 }
             };
-         
+
 
             DataContext = this;
         }
@@ -96,7 +96,7 @@ namespace WpfAppNikiforov
                 });
             }
         }
-    
+
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ApplySort();
@@ -122,7 +122,7 @@ namespace WpfAppNikiforov
             NavigationService.GoBack();
         }
 
-     private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             TextBox textBox = sender as TextBox;
             if (textBox != null)
@@ -130,6 +130,7 @@ namespace WpfAppNikiforov
                 Find(textBox.Text);
             }
         }
-        
+
+    }
 }
 

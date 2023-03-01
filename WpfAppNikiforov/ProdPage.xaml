@@ -84,7 +84,7 @@
             <Label FontSize="15" Margin="3" HorizontalAlignment="Center" >Категория</Label>
             <ComboBox SelectedItem="{Binding cat1}" Margin="15" Name="cbCategory"></ComboBox>
             <Button Width="119" x:Name="BtnSaveClick" Click="BtnSaveClick_AddProd" Content="Добавить" Margin="0 5 0 10"/>
-            <Button Width="119" Content="Редактировать" Click="EditProduct"></Button>
+            <Button Width="119" Content="Редактировать" Click="EditProducts"></Button>
         </StackPanel>
         <StackPanel Grid.Column="1" Margin="0,0,6,0" >
             <Image Width="400" Height="300" Name="ImageBlock"></Image>

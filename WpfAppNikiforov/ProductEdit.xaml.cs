@@ -33,7 +33,7 @@ namespace WpfAppNikiforov
             ProductBlock.DataContext = prod;
         }
 
-        private void EditProduct(object sender, RoutedEventArgs e)
+        private void SaveChangesProduct(object sender, RoutedEventArgs e)
         {
             dbconn.SaveChanges();
             if (NavigationService.CanGoBack)
