@@ -27,6 +27,16 @@ namespace WpfAppNikiforov
         {
             InitializeComponent();
             this.dbconn = dbconnection;
+            
+          
+
+            DataContext = this;
+            ProductBlock.DataContext = new Prod();
+
+            Binding binding = new Binding();
+            binding.Source = dbconn.cat1.ToList();
+            cbCategory.DisplayMemberPath = "name";
+            cbCategory.SetBinding(ComboBox.ItemsSourceProperty, binding);
         }
         public void SetProduct(Prod prod)
         {
